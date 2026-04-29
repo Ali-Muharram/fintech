@@ -1,4 +1,6 @@
-
+/**
+ * Navigation links for the Header component
+ */
 export const NAV_LINKS = [
   { name: 'المميزات', href: '#benefits' },
   { name: 'الخدمات', href: '#features' },

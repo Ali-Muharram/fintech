@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <body
-        className={`${cairo.variable} font-(family-name:--font-cairo) antialiased`}
+        className={`${cairo.variable} font-(family-name:--font-cairo) antialiased continar`}
       >
         <Header />
         <AppProvider>{children}</AppProvider>

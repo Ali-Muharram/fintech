@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -182,4 +182,25 @@
     width: 5rem;
     opacity: 1;
   }
+}
+@keyframes wave {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(5%, 5%) rotate(5deg); }
+  66% { transform: translate(-2%, 5%) rotate(-2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@layer utilities {
+  .hide-on-mobile {
+    @apply hidden md:block;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(12deg); }
+  50% { transform: translateY(-0.9375rem) rotate(10deg); }
+}
+
+.animate-float-card {
+  animation: float 6s ease-in-out infinite;
 }

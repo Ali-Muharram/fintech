@@ -13,10 +13,10 @@ export default function Loading() {
           {/* Outer ring */}
           <div className="absolute inset-0 rounded-full border-4 border-white/5" />
           {/* Spinning gradient ring */}
-          <div className="absolute inset-0 animate-spin rounded-full border-4 border-transparent border-t-indigo-500 border-r-purple-500 shadow-[0_0_15px_rgba(99,102,241,0.4)]" />
+          <div className="absolute inset-0 animate-spin rounded-full border-4 border-transparent border-t-indigo-500 border-r-purple-500 shadow-[0_0_0.9375rem_rgba(99,102,241,0.4)]" />
           
           {/* Center pulse */}
-          <div className="absolute inset-4 animate-pulse rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 opacity-50 blur-sm" />
+          <div className="absolute inset-4 animate-pulse rounded-full bg-linear-to-br from-indigo-500 to-purple-600 opacity-50 blur-sm" />
         </div>
 
         <div className="flex flex-col items-center gap-2">
