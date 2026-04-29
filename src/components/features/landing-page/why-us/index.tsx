@@ -23,6 +23,19 @@ export default function WhyUs() {
       dir="rtl"
     >
       <div className="mx-auto max-w-6xl">
+        <div className="section-title mb-12 text-right">
+          <div className="mb-4 flex items-center gap-2">
+             <div className="flex h-6 w-6 items-center justify-center rounded-md bg-white/10 border border-white/20">
+                <CheckCircle2 className="h-4 w-4 text-white" />
+             </div>
+             <span className="text-[0.625rem] font-bold tracking-[0.2em] text-gray-400 uppercase">
+                لماذا نحن
+             </span>
+          </div>
+          <h2 className="text-3xl font-black tracking-tight text-white md:text-5xl lg:text-6xl leading-[1.1]">
+            لماذا يختارنا <br /> المستقلون وأصحاب الأعمال؟
+          </h2>
+        </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           {/* Right Column (Large Tall Card) */}
           <div className="card-right relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-zinc-950 p-10 lg:order-last">

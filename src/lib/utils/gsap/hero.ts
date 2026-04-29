@@ -49,5 +49,16 @@ export const animateHero = (container: HTMLElement | null) => {
     );
   }
 
+  // if (btns.length) {
+  //   tl.from(
+  //     btns,
+  //     {
+  //       y: 20,
+  //       opacity: 0,
+  //     },
+  //     '-=0.4'
+  //   );
+  // }
+
   return tl;
 };

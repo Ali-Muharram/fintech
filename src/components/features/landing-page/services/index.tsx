@@ -9,17 +9,17 @@ const SERVICES_DATA = [
   {
     title: 'حماية الهوية الرقمية',
     description: 'نحافظ على سرية هويتك ومعاملاتك مع أدوات تمنع التتبع وتحمي بياناتك المالية بالكامل.',
-    image: '/images/services/service1.png',
+    image: '/images/service1.webp',
   },
   {
     title: 'تشفير العمليات المالية',
     description: 'اتصالاتك مشفرة بالكامل، مما يضمن سلامة عمليات التحويل والسحب دون مخاطر تسريب البيانات.',
-    image: '/images/services/service2.png',
+    image: '/images/service2.webp',
   },
   {
     title: 'بوابة دفع عالمية',
     description: 'ارتبط بالأسواق العالمية واحصل على مستحقاتك من أي مكان، بغض النظر عن القيود البنكية المحلية.',
-    image: '/images/services/service3.png',
+    image: '/images/service3.webp',
   },
 ];
 
@@ -28,7 +28,7 @@ export default function Services() {
 
   useGSAP(
     () => {
-      // animateServices(container.current);
+      animateServices(container.current);
     },
     { scope: container }
   );
@@ -36,7 +36,7 @@ export default function Services() {
   return (
     <section
       ref={container}
-      className="bg-black py-24 px-4 overflow-hidden"
+      className="bg-black px-4 overflow-hidden"
       dir="rtl"
     >
       <div className="mx-auto max-w-6xl">
@@ -61,18 +61,18 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="services-grid grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="services-grid grid grid-cols-1 gap-3 md:grid-cols-3">
           {SERVICES_DATA.map((service, index) => (
             <div
               key={index}
-              className="service-card group relative flex min-h-[400px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-zinc-950 p-8 transition-all hover:border-white/20"
+              className="service-card group relative flex min-h-[320px] md:min-h-[400px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-zinc-950 p-6 md:p-8 transition-all hover:border-white/20"
             >
               {/* Text Content */}
               <div className="relative z-20">
-                <h3 className="mb-4 text-xl font-bold text-white md:text-2xl">
+                <h3 className="mb-3 text-lg font-bold text-white md:mb-4 md:text-xl lg:text-2xl">
                   {service.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-gray-400">
+                <p className="text-xs leading-relaxed text-gray-400 md:text-sm">
                   {service.description}
                 </p>
               </div>

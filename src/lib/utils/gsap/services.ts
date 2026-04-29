@@ -29,7 +29,7 @@ export const animateServices = (container: HTMLElement | null) => {
     y: 60,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    
     ease: 'power3.out',
   });
 };
