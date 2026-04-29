@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Cairo } from 'next/font/google';
 import { AppProvider } from '@/components/providers/app-provider';
 import './globals.css';
-import Test from '@/components/test';
 
 const cairo = Cairo({
   variable: '--font-cairo',
