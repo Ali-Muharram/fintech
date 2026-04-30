@@ -55,7 +55,7 @@ export function LoginForm({
         router.push('/');
         router.refresh();
       }
-    } catch (err) {
+    } catch {
       setError('حدث خطأ أثناء تسجيل الدخول');
     }
   };
@@ -105,7 +105,7 @@ export function LoginForm({
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+              className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400 transition-colors hover:text-white"
             >
               {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
             </button>
@@ -114,13 +114,22 @@ export function LoginForm({
         </Field>
 
         <Field>
-          {error && <ErrorAlert title="فشل تسجيل الدخول" message={error} className="mb-2" />}
+          {error && (
+            <ErrorAlert
+              title="فشل تسجيل الدخول"
+              message={error}
+              className="mb-2"
+            />
+          )}
           <Button type="submit" className="w-full" disabled={isSubmitting}>
             {isSubmitting ? 'جاري الدخول...' : 'تسجيل الدخول'}
           </Button>
           <FieldDescription className="text-center">
             ليس لديك حساب؟{' '}
-            <Link href="/auth/register" className="underline underline-offset-4">
+            <Link
+              href="/auth/register"
+              className="underline underline-offset-4"
+            >
               إنشاء حساب جديد
             </Link>
           </FieldDescription>

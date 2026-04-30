@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import { animateServices } from '@/lib/utils/gsap/services';
 import { ShieldCheck } from 'lucide-react';
@@ -81,9 +82,11 @@ export default function Services() {
               {/* Background Image/Visual */}
               <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-linear-to-b from-zinc-950 via-zinc-950/80 to-transparent z-10" />
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
+                  width={600}
+                  height={400}
                   className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60"
                 />
               </div>

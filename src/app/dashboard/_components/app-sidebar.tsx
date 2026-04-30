@@ -2,9 +2,12 @@
 
 import * as React from 'react';
 
-import { NavMain } from '@/app/dashboard/_components/nav-main';
+import {
+  NavMain
+} from '@/app/dashboard/_components/nav-main';
 import { NavSecondary } from '@/app/dashboard/_components/nav-secondary';
 import { NavUser } from '@/app/dashboard/_components/nav-user';
+import Link from 'next/link';
 import {
   Sidebar,
   SidebarContent,
@@ -65,7 +68,17 @@ const data = {
     },
   ],
 };
-export function AppSidebar({ sessionUser, ...props }: React.ComponentProps<typeof Sidebar> & { sessionUser?: any }) {
+export function AppSidebar({
+  sessionUser,
+  ...props
+}: React.ComponentProps<typeof Sidebar> & {
+  sessionUser?: {
+    name?: string | null;
+    email?: string | null;
+    image?: string | null;
+    avatarColor?: string | null;
+  };
+}) {
   const user = {
     name: sessionUser?.name || 'مستخدم غير معروف',
     email: sessionUser?.email || '',
@@ -80,7 +93,7 @@ export function AppSidebar({ sessionUser, ...props }: React.ComponentProps<typeo
           <SidebarMenuItem>
             <SidebarMenuButton
               className="data-[slot=sidebar-menu-button]:p-1.5!"
-              render={<a href="/" />}
+              render={<Link href="/" />}
             >
               <div className="bg-foreground text-background flex size-6 items-center justify-center rounded-md">
                 <Shield className="size-4" />

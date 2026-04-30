@@ -27,7 +27,7 @@ export async function POST(request: Request) {
       },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.log('hellow from error in request');
     // Handle validation errors from Zod
     if (error instanceof ZodError) {
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: false,
-        message: error.message || 'حدث خطأ أثناء إنشاء الحساب',
+        message: error instanceof Error ? error.message : 'حدث خطأ أثناء إنشاء الحساب',
       },
       { status: 400 }
     );

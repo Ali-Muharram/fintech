@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { LoginForm } from './_components/login-form';
 import { Shield } from 'lucide-react';
+import Image from 'next/image';
 
 export default function LoginPage() {
   return (
@@ -8,7 +9,7 @@ export default function LoginPage() {
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
           <Link href="/" className="flex items-center gap-2 font-medium">
-            <div className="flex size-6 items-center justify-center rounded-md bg-foreground text-background">
+            <div className="bg-foreground text-background flex size-6 items-center justify-center rounded-md">
               <Shield className="size-4" />
             </div>
             ORVIS
@@ -20,11 +21,15 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-      <div className="relative rounded-lg overflow-hidden hidden m-5 lg:block">
-        <img
+      <div className="relative m-5 hidden overflow-hidden rounded-lg lg:block">
+        <Image
           src="/images/login.jpg"
           alt="Login Background"
           className="absolute inset-0 h-full w-full object-cover"
+          fill
+          priority
+          sizes="(max-width: 1024px) 50vw, 100vw"
+          quality={100}
         />
       </div>
     </div>

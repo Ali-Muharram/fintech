@@ -17,7 +17,6 @@ export const animateHero = (container: HTMLElement | null) => {
   const badge = q('.hero-badge');
   const title = q('.hero-title');
   const desc = q('.hero-description');
-  const btns = q('.hero-btn');
 
   if (badge.length) {
     tl.from(badge, {

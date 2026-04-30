@@ -8,7 +8,6 @@ import {
   FieldError,
   FieldGroup,
   FieldLabel,
-  FieldSeparator,
   FieldDescription,
 } from '@/components/ui/field';
 import { Input } from '@/components/ui/input';
@@ -34,7 +33,6 @@ export function RegisterForm({
   const {
     register,
     handleSubmit,
-    setError,
     formState: { errors },
   } = useForm<RegisterValues>({
     resolver: zodResolver(registerSchema),
@@ -48,7 +46,7 @@ export function RegisterForm({
 
   const onSubmit = async (data: RegisterValues) => {
     registerMutation.mutate(data, {
-      onSuccess: async (result) => {
+      onSuccess: async () => {
         // Automatically sign in after registration
         const loginResult = await signIn('credentials', {
           email: data.email,

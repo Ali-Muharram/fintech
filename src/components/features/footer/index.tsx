@@ -35,7 +35,7 @@ export default function Footer() {
         {/* Pages Links */}
         <div className="flex flex-col gap-6">
           <h4 className="text-sm font-bold tracking-[0.2em] text-gray-500 uppercase">
-            // الصفحات
+            {'// الصفحات'}
           </h4>
           <ul className="flex flex-col gap-4">
             <li>
@@ -92,7 +92,7 @@ export default function Footer() {
         {/* Social Links */}
         <div className="flex flex-col gap-6">
           <h4 className="text-sm font-bold tracking-[0.2em] text-gray-500 uppercase">
-            // التواصل الاجتماعي
+            {'// التواصل الاجتماعي'}
           </h4>
           <ul className="flex flex-col gap-4">
             <li>
@@ -141,7 +141,7 @@ export default function Footer() {
         </p>
         <p className="flex items-center gap-2 text-sm text-gray-500">
           صمم بواسطة{' '}
-          <span className="font-medium text-gray-300">cookie's code</span>
+          <span className="font-medium text-gray-300">cookie&apos;s code</span>
         </p>
       </div>
     </footer>

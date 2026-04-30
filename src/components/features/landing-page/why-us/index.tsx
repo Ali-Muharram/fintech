@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Globe, Percent, Lock, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useGSAP } from '@gsap/react';
 import { animateWhyUs } from '@/lib/utils/gsap/why-us';
@@ -108,9 +109,11 @@ export default function WhyUs() {
               {/* Animated Black Visa Card Visual */}
               <div className="relative z-10 flex w-full justify-center md:w-1/2">
                 <div className="animate-float-card relative drop-shadow-[0_1.25rem_3.125rem_rgba(0,0,0,0.5)] filter">
-                  <img
+                  <Image
                     src="/images/black-card.png"
                     alt="Orvis Black Card"
+                    width={224}
+                    height={140}
                     className="w-48 rounded-2xl border md:w-56"
                   />
                   {/* Subtle Glow behind the card */}

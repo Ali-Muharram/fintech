@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Check, ShieldCheck, FileText } from 'lucide-react';
 import { useGSAP } from '@gsap/react';
 import { animatePricing } from '@/lib/utils/gsap/pricing';

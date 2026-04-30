@@ -44,27 +44,27 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
-  session: {
-    strategy: "jwt",
-  },
-  pages: {
-    signIn: "/auth/login",
-  },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
-        token.avatarColor = (user as any).avatarColor;
+        token.avatarColor = user.avatarColor;
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
-        (session.user as any).id = token.id;
-        (session.user as any).avatarColor = token.avatarColor;
+        session.user.id = token.id;
+        session.user.avatarColor = token.avatarColor;
       }
       return session;
     },
+  },
+  session: {
+    strategy: "jwt",
+  },
+  pages: {
+    signIn: "/auth/login",
   },
   secret: process.env.NEXTAUTH_SECRET,
 };
@@ -72,3 +72,28 @@ export const authOptions: NextAuthOptions = {
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
+
+// Type definitions for NextAuth
+declare module "next-auth" {
+  interface Session {
+    user: {
+      id: string;
+      name?: string | null;
+      email?: string | null;
+      image?: string | null;
+      avatarColor?: string | null;
+    };
+  }
+
+  interface User {
+    id: string;
+    avatarColor?: string | null;
+  }
+}
+
+declare module "next-auth/jwt" {
+  interface JWT {
+    id: string;
+    avatarColor?: string | null;
+  }
+}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import { REVIEWS_DATA } from '@/lib/constants/reviews';
 import { animateReviews } from '@/lib/utils/gsap/reviews';
@@ -59,15 +60,17 @@ export default function Reviews() {
                   </div>
                   {/* Content */}
                   <p className="text-sm leading-relaxed text-gray-300 md:text-base">
-                    "{review.content}"
+                    &quot;{review.content}&quot;
                   </p>
                 </div>
 
                 {/* User Info */}
                 <div className="mt-8 flex items-center gap-4">
-                  <img
+                  <Image
                     src={review.avatar}
                     alt={review.name}
+                    width={48}
+                    height={48}
                     className="h-10 w-10 rounded-full border border-white/10 grayscale md:h-12 md:w-12"
                   />
                   <div>

@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import { RegisterForm } from './_components/register-form';
 import { Shield } from 'lucide-react';
-
+import Image from 'next/image';
 export default function RegisterPage() {
   return (
-    <div className="grid min-h-svh lg:grid-cols-2 ">
+    <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
-          <Link href="/" className="flex items-center gap-2 font-medium ">
-            <div className="flex size-6 items-center justify-center rounded-md bg-foreground text-background">
+          <Link href="/" className="flex items-center gap-2 font-medium">
+            <div className="bg-foreground text-background flex size-6 items-center justify-center rounded-md">
               <Shield className="size-4" />
             </div>
             ORVIS
@@ -20,11 +20,15 @@ export default function RegisterPage() {
           </div>
         </div>
       </div>
-      <div className="relative rounded-lg overflow-hidden hidden m-5  lg:block">
-        <img
+      <div className="relative m-5 hidden overflow-hidden rounded-lg lg:block">
+        <Image
           src="/images/login.jpg"
           alt="Registration Background"
-          className="absolute inset-0 h-full w-full object-cover  "
+          className="absolute inset-0 h-full w-full object-cover"
+          fill
+          priority
+          sizes="(max-width: 1024px) 50vw, 100vw"
+          quality={100}
         />
       </div>
     </div>
