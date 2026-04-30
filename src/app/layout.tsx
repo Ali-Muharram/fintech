@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Cairo } from 'next/font/google';
 import { AppProvider } from '@/components/providers/app-provider';
-import Header from '@/components/features/header';
 import './globals.css';
 
 const cairo = Cairo({
@@ -23,9 +22,8 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <body
-        className={`${cairo.variable} font-(family-name:--font-cairo) antialiased continar`}
+        className={`${cairo.variable} continar font-(family-name:--font-cairo) antialiased`}
       >
-        <Header />
         <AppProvider>{children}</AppProvider>
       </body>
     </html>

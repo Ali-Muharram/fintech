@@ -21,6 +21,7 @@ export default function Reviews() {
       ref={container}
       className="overflow-hidden bg-black px-4"
       dir="rtl"
+      id="reviews"
     >
       <div className="mx-auto max-w-6xl">
         {/* Header Section */}

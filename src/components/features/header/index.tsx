@@ -49,11 +49,11 @@ export default function Header() {
           ))}
         </ul>
 
-        {/* Action Buttons (Login/Register) - Visible on Large Screens */}
+        {/* Action Buttons (Login/auth/register) - Visible on Large Screens */}
         <div className="hidden items-center gap-4 lg:flex">
           {/* Animated Border Login Button using Theme Schema */}
           <Link
-            href="/login"
+            href="/auth/login"
             className="group relative flex items-center justify-center overflow-hidden rounded-xl p-0.25 transition-all hover:scale-105 active:scale-95"
           >
             {/* Rotating Gradient using Theme Colors */}
@@ -66,7 +66,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/register"
+            href="/auth/register"
             className="bg-foreground text-background rounded-xl px-4 py-2 text-xs font-bold shadow-[0_0_1.25rem_rgba(255,255,255,0.1)] transition-all hover:opacity-90 active:scale-95"
           >
             إنشاء حساب
@@ -124,7 +124,7 @@ export default function Header() {
               </div>
             </Link>
             <Link
-              href="/register"
+              href="/auth/register"
               className="text-background bg-foreground flex items-center justify-center rounded-xl py-2.5 text-xs font-bold"
             >
               إنشاء حساب

@@ -19,7 +19,7 @@ export default function HeroSection() {
   return (
     <section
       ref={container}
-      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black px-4 py-20 text-center md:py-32"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black px-4 text-center md:py-32"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -70,14 +70,14 @@ export default function HeroSection() {
         {/* Action Buttons */}
         <div className="flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
           <Link
-            href="/register"
+            href="/auth/register"
             className="hero-btn group flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white px-8 font-bold text-black transition-all hover:bg-gray-200 active:scale-95 sm:w-auto"
           >
             ابدأ الآن
             <ArrowRight className="h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-1" />
           </Link>
           <Link
-            href="/learn-more"
+            href="/#why-us"
             className="hero-btn flex h-12 w-full items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 font-semibold text-white transition-all hover:bg-white/10 active:scale-95 sm:w-auto"
           >
             كيف نحميك؟

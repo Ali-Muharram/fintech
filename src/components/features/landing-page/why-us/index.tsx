@@ -19,8 +19,9 @@ export default function WhyUs() {
   return (
     <section
       ref={container}
-      className="overflow-hidden bg-black px-4 "
+      className="overflow-hidden -mt-10 px-4 "
       dir="rtl"
+      id="why-us"
     >
       <div className="mx-auto max-w-6xl">
         <div className="section-title mb-12 text-right">

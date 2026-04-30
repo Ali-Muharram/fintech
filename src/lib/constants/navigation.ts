@@ -2,9 +2,9 @@
  * Navigation links for the Header component
  */
 export const NAV_LINKS = [
-  { name: 'المميزات', href: '#benefits' },
-  { name: 'الخدمات', href: '#features' },
-  { name: 'الخطط', href: '#plans' },
-  { name: 'الأسئلة الشائعة', href: '#faq' },
-  { name: 'تواصل معنا', href: '#contact' },
+  { name: 'لماذا نحن؟', href: '/#why-us' },
+  { name: 'خدماتنا', href: '/#services' },
+  { name: 'الأسعار', href: '/#pricing' },
+  { name: 'الأسئلة الشائعة', href: '/#faq' },
+  { name: 'التقييمات', href: '/#reviews' },
 ] as const;

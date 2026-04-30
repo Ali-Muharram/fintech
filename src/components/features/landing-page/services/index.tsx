@@ -38,6 +38,7 @@ export default function Services() {
       ref={container}
       className="bg-black px-4 overflow-hidden"
       dir="rtl"
+      id="services"
     >
       <div className="mx-auto max-w-6xl">
         {/* Header Section */}
