@@ -13,7 +13,7 @@ const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
     rules: {
-      'no-unused-vars': 'true', // نغلق القاعدة الأساسية لنستخدم نسخة TypeScript
+      'no-unused-vars': 'warn', // نغلق القاعدة الأساسية لنستخدم نسخة TypeScript
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
