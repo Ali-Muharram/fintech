@@ -2,9 +2,7 @@
 
 import * as React from 'react';
 
-import {
-  NavMain
-} from '@/app/dashboard/_components/nav-main';
+import { NavMain } from '@/app/dashboard/_components/nav-main';
 import { NavSecondary } from '@/app/dashboard/_components/nav-secondary';
 import { NavUser } from '@/app/dashboard/_components/nav-user';
 import Link from 'next/link';
@@ -17,73 +15,23 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import {
-  LayoutDashboardIcon,
-  FolderIcon,
-  UsersIcon,
-  FileTextIcon,
-  Settings2Icon,
-  BanknoteIcon,
-  Shield,
-} from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { SIDEBAR_DATA } from '@/lib/constants/sidebar';
 
-const data = {
-  user: {
-    name: 'shadcn',
-    email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg',
-  },
-  navMain: [
-    {
-      title: 'الرئيسية',
-      url: '/dashboard',
-      icon: <LayoutDashboardIcon />,
-    },
-    {
-      title: 'المشاريع',
-      url: '/dashboard/projects',
-      icon: <FolderIcon />,
-    },
-    {
-      title: 'العملاء',
-      url: '/dashboard/clients',
-      icon: <UsersIcon />,
-    },
-    {
-      title: 'النزاعات',
-      url: '/dashboard/disputes',
-      icon: <FileTextIcon />,
-    },
-    {
-      title: 'سحب الأموال',
-      url: '/dashboard/withdrawals',
-      icon: <BanknoteIcon />,
-    },
-  ],
-  navSecondary: [
-    {
-      title: 'الإعدادات',
-      url: '/dashboard/settings',
-      icon: <Settings2Icon />,
-    },
-  ],
-};
+import { AuthUser } from '@/lib/types/auth';
+
 export function AppSidebar({
   sessionUser,
   ...props
 }: React.ComponentProps<typeof Sidebar> & {
-  sessionUser?: {
-    name?: string | null;
-    email?: string | null;
-    image?: string | null;
-    avatarColor?: string | null;
-  };
+  sessionUser?: AuthUser;
 }) {
-  const user = {
+  const user: AuthUser = {
     name: sessionUser?.name || 'مستخدم غير معروف',
     email: sessionUser?.email || '',
-    avatar: sessionUser?.image || '',
     avatarColor: sessionUser?.avatarColor || '#ccc',
+    id: sessionUser?.id || '',
+    image: sessionUser?.image || '',
   };
 
   return (
@@ -104,8 +52,8 @@ export function AppSidebar({
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <NavMain items={SIDEBAR_DATA.navMain} />
+        <NavSecondary items={SIDEBAR_DATA.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={user} />

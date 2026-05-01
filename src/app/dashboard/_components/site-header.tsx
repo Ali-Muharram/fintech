@@ -3,19 +3,11 @@
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
 import { usePathname } from "next/navigation"
-
-const routeNames: Record<string, string> = {
-  "/dashboard": "الرئيسية",
-  "/dashboard/projects": "المشاريع",
-  "/dashboard/clients": "العملاء",
-  "/dashboard/disputes": "النزاعات",
-  "/dashboard/settings": "الإعدادات",
-  "/dashboard/withdrawals": "سحب الأموال",
-};
+import { ROUTE_NAMES } from "@/lib/constants/navigation"
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const title = routeNames[pathname] || "لوحة التحكم";
+  const title = ROUTE_NAMES[pathname] || "لوحة التحكم";
 
   return (
     <header className="flex h-(--header-height) shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)">

@@ -21,7 +21,6 @@ import { useRegister } from '../_hooks/use-register';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 export function RegisterForm({
-
   className,
   ...props
 }: React.ComponentProps<'form'>) {
@@ -64,7 +63,7 @@ export function RegisterForm({
       },
       onError: (error) => {
         alert(error.message);
-      }
+      },
     });
   };
 
@@ -72,14 +71,13 @@ export function RegisterForm({
 
   return (
     <form
-
       onSubmit={handleSubmit(onSubmit)}
       className={cn('flex flex-col gap-6', className)}
       {...props}
     >
       <FieldGroup>
         <div className="flex flex-col items-center gap-1 text-center">
-          <h1 className="text-2xl font-bold ">إنشاء حساب جديد</h1>
+          <h1 className="text-2xl font-bold">إنشاء حساب جديد</h1>
           <p className="text-muted-foreground text-sm text-balance">
             أدخل معلوماتك لإنشاء حسابك في Orvis
           </p>
@@ -87,7 +85,7 @@ export function RegisterForm({
 
         <Field>
           <FieldLabel htmlFor="name">الاسم الكامل</FieldLabel>
-          <Input id="name" placeholder="علي محرم" {...register('name')} />
+          <Input id="name" placeholder="ادخل اسمك" {...register('name')} />
           <FieldError errors={[errors.name]} />
         </Field>
 
@@ -114,7 +112,7 @@ export function RegisterForm({
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+              className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400 transition-colors hover:text-white"
             >
               {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
             </button>
@@ -134,7 +132,7 @@ export function RegisterForm({
             <button
               type="button"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+              className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400 transition-colors hover:text-white"
             >
               {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
             </button>

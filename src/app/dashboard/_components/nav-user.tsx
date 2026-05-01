@@ -19,16 +19,9 @@ import {
 } from '@/components/ui/sidebar';
 import { EllipsisVerticalIcon, BellIcon, LogOutIcon } from 'lucide-react';
 
-export function NavUser({
-  user,
-}: {
-  user: {
-    name: string;
-    email: string;
-    avatar: string;
-    avatarColor?: string;
-  };
-}) {
+import { AuthUser } from '@/lib/types/auth';
+
+export function NavUser({ user }: { user: AuthUser & { avatar?: string } }) {
   const { isMobile } = useSidebar();
   const initials = user.name ? user.name.slice(0, 2).toUpperCase() : 'UR';
 
@@ -42,7 +35,7 @@ export function NavUser({
             }
           >
             <Avatar className="size-8 rounded-lg grayscale">
-              <AvatarImage src={user.avatar} alt={user.name} />
+              <AvatarImage src={user.avatar} alt={user.name || 'avatar'} />
               <AvatarFallback
                 className="rounded-lg text-white"
                 style={{ backgroundColor: user.avatarColor || '#333' }}
@@ -68,7 +61,10 @@ export function NavUser({
               <DropdownMenuLabel className="p-0 font-normal">
                 <div className="flex items-center gap-3 px-2 py-2 text-right text-sm">
                   <Avatar className="size-9 rounded-xl">
-                    <AvatarImage src={user.avatar} alt={user.name} />
+                    <AvatarImage
+                      src={user.avatar}
+                      alt={user.name || 'avatar'}
+                    />
                     <AvatarFallback
                       className="rounded-xl font-medium text-white shadow-sm"
                       style={{ backgroundColor: user.avatarColor || '#333' }}
@@ -95,7 +91,7 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator className="my-1.5" />
-            <DropdownMenuItem 
+            <DropdownMenuItem
               className="cursor-pointer gap-3 rounded-xl p-2.5 text-[14px] font-medium text-red-600 transition-colors hover:bg-red-50 hover:text-red-700 focus:bg-red-50 focus:text-red-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10"
               onClick={() => signOut({ callbackUrl: '/auth/login' })}
             >

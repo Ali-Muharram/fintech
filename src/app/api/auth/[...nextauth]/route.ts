@@ -72,28 +72,3 @@ export const authOptions: NextAuthOptions = {
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
-
-// Type definitions for NextAuth
-declare module "next-auth" {
-  interface Session {
-    user: {
-      id: string;
-      name?: string | null;
-      email?: string | null;
-      image?: string | null;
-      avatarColor?: string | null;
-    };
-  }
-
-  interface User {
-    id: string;
-    avatarColor?: string | null;
-  }
-}
-
-declare module "next-auth/jwt" {
-  interface JWT {
-    id: string;
-    avatarColor?: string | null;
-  }
-}
