@@ -84,13 +84,6 @@ export function NavUser({ user }: { user: AuthUser & { avatar?: string } }) {
               </DropdownMenuLabel>
             </DropdownMenuGroup>
             <DropdownMenuSeparator className="my-1.5" />
-            <DropdownMenuGroup>
-              <DropdownMenuItem className="hover:bg-accent focus:bg-accent cursor-pointer gap-3 rounded-xl p-2.5 text-[14px] font-medium transition-colors">
-                <BellIcon className="text-muted-foreground size-4" />
-                الإشعارات
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuSeparator className="my-1.5" />
             <DropdownMenuItem
               className="cursor-pointer gap-3 rounded-xl p-2.5 text-[14px] font-medium text-red-600 transition-colors hover:bg-red-50 hover:text-red-700 focus:bg-red-50 focus:text-red-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10"
               onClick={() => signOut({ callbackUrl: '/auth/login' })}

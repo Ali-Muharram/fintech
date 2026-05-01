@@ -4,6 +4,7 @@ export interface IUser extends Document {
   name?: string;
   email: string;
   password?: string;
+  userrole: 'Client' | 'Freelancer';
   avatarColor?: string;
   image?: string;
 }
@@ -21,10 +22,12 @@ const UserSchema = new Schema<IUser>(
     password: {
       type: String,
     },
-    avatarColor: {
+    userrole: {
       type: String,
+      enum: ['Client', 'Freelancer'],
+      required: true,
     },
-    image: {
+    avatarColor: {
       type: String,
     },
   },

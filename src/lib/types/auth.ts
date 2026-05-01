@@ -3,5 +3,6 @@ export type AuthUser = {
   name: string;
   email: string;
   image: string;
+  userrole: 'Client' | 'Freelancer';
   avatarColor: string;
 };

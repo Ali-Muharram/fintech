@@ -12,7 +12,6 @@ export const NAV_LINKS = [
 export const ROUTE_NAMES: Record<string, string> = {
   "/dashboard": "الرئيسية",
   "/dashboard/projects": "المشاريع",
-  "/dashboard/clients": "العملاء",
   "/dashboard/disputes": "النزاعات",
   "/dashboard/settings": "الإعدادات",
   "/dashboard/withdrawals": "سحب الأموال",

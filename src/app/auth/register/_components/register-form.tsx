@@ -13,7 +13,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { registerSchema, type RegisterValues } from '@/lib/schemes/auth';
 import Link from 'next/link';
-import { Eye, EyeOff, Loader2 } from 'lucide-react';
+import { Eye, EyeOff, Loader2, Briefcase, User } from 'lucide-react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
@@ -35,16 +35,21 @@ export function RegisterForm({
   const {
     register,
     handleSubmit,
+    setValue,
+    watch,
     formState: { errors },
   } = useForm<RegisterValues>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
       name: '',
       email: '',
+      userrole: 'Client',
       password: '',
       confirmPassword: '',
     },
   });
+
+  const selectedRole = watch('userrole');
 
   const onSubmit = async (data: RegisterValues) => {
     setError(null);
@@ -87,6 +92,37 @@ export function RegisterForm({
             أدخل معلوماتك لإنشاء حسابك في Orvis
           </p>
         </div>
+
+        <div className="grid grid-cols-2 gap-4">
+          <button
+            type="button"
+            onClick={() => setValue('userrole', 'Client')}
+            className={cn(
+              'flex flex-col items-center gap-2 rounded-xl border p-4 transition-all hover:bg-muted/50',
+              selectedRole === 'Client'
+                ? 'border-teal-500 bg-teal-500/5 ring-1 ring-teal-500'
+                : 'border-muted'
+            )}
+          >
+            <User className={cn('size-6', selectedRole === 'Client' ? 'text-teal-500' : 'text-muted-foreground')} />
+            <span className={cn('text-sm font-bold', selectedRole === 'Client' ? 'text-teal-500' : 'text-foreground')}>عميل</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setValue('userrole', 'Freelancer')}
+            className={cn(
+              'flex flex-col items-center gap-2 rounded-xl border p-4 transition-all hover:bg-muted/50',
+              selectedRole === 'Freelancer'
+                ? 'border-teal-500 bg-teal-500/5 ring-1 ring-teal-500'
+                : 'border-muted'
+            )}
+          >
+            <Briefcase className={cn('size-6', selectedRole === 'Freelancer' ? 'text-teal-500' : 'text-muted-foreground')} />
+            <span className={cn('text-sm font-bold', selectedRole === 'Freelancer' ? 'text-teal-500' : 'text-foreground')}>مستقل</span>
+          </button>
+        </div>
+        {errors.userrole && <p className="text-destructive text-center text-xs">{errors.userrole.message}</p>}
 
         <Field>
           <FieldLabel htmlFor="name">الاسم الكامل</FieldLabel>

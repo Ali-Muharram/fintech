@@ -19,7 +19,7 @@ const AVATAR_COLORS = [
 export const registerUser = async (data: RegisterValues) => {
   await connectDB();
 
-  const { name, email, password } = data;
+  const { name, email, password, userrole } = data;
 
   // Check if user already exists
   const existingUser = await User.findOne({ email });
@@ -33,12 +33,13 @@ export const registerUser = async (data: RegisterValues) => {
   // Pick a random avatar color
   const avatarColor =
     AVATAR_COLORS[Math.floor(Math.random() * AVATAR_COLORS.length)];
-
+  console.log({ data });
   // Create user
   const user = await User.create({
     name,
     email,
     password: hashedPassword,
+    userrole: userrole,
     avatarColor,
   });
 

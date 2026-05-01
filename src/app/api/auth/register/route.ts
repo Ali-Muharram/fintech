@@ -22,6 +22,7 @@ export async function POST(request: Request) {
           id: user.id,
           name: user.name,
           email: user.email,
+          userrole: user.userrole,
           avatarColor: user.avatarColor,
         },
       },

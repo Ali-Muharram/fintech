@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-
 import { NavMain } from '@/app/dashboard/_components/nav-main';
 import { NavSecondary } from '@/app/dashboard/_components/nav-secondary';
 import { NavUser } from '@/app/dashboard/_components/nav-user';
@@ -17,8 +16,7 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { Shield } from 'lucide-react';
-import { SIDEBAR_DATA } from '@/lib/constants/sidebar';
-
+import { getSidebarData } from '@/lib/constants/sidebar';
 import { AuthUser } from '@/lib/types/auth';
 
 export function AppSidebar({
@@ -34,7 +32,10 @@ export function AppSidebar({
     avatarColor: sessionUser?.avatarColor || '#ccc',
     id: sessionUser?.id || '',
     image: sessionUser?.image || '',
+    userrole: sessionUser?.userrole || 'Client',
   };
+
+  const sidebarData = getSidebarData(user.userrole);
 
   return (
     <Sidebar side="right" collapsible="offcanvas" {...props}>
@@ -61,8 +62,8 @@ export function AppSidebar({
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={SIDEBAR_DATA.navMain} />
-        <NavSecondary items={SIDEBAR_DATA.navSecondary} className="mt-auto" />
+        <NavMain items={sidebarData.navMain} />
+        <NavSecondary items={sidebarData.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={user} />

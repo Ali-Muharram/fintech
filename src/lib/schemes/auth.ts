@@ -4,6 +4,9 @@ export const registerSchema = z
   .object({
     name: z.string().min(2, { message: 'الاسم يجب أن يكون أكثر من حرفين' }),
     email: z.string().email({ message: 'بريد إلكتروني غير صحيح' }),
+    userrole: z.enum(['Client', 'Freelancer'], {
+      required_error: 'يرجى اختيار نوع الحساب',
+    }),
     password: z
       .string()
       .min(8, { message: 'كلمة السر يجب أن تكون 8 أحرف على الأقل' }),
