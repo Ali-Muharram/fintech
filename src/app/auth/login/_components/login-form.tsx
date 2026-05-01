@@ -14,7 +14,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { loginSchema, type LoginValues } from '@/lib/schemes/auth';
 import Link from 'next/link';
-import { Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -122,7 +122,11 @@ export function LoginForm({
             />
           )}
           <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? 'جاري الدخول...' : 'تسجيل الدخول'}
+            {isSubmitting ? (
+              <Loader2 className="size-4 animate-spin" />
+            ) : (
+              'تسجيل الدخول'
+            )}
           </Button>
           <FieldDescription className="text-center">
             ليس لديك حساب؟{' '}

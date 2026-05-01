@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Cairo } from 'next/font/google';
 import { AppProvider } from '@/components/providers/app-provider';
 import './globals.css';
+import { Toaster } from 'sonner';
 
 const cairo = Cairo({
   variable: '--font-cairo',
@@ -25,6 +26,7 @@ export default function RootLayout({
         className={`${cairo.variable} continar font-(family-name:--font-cairo) antialiased`}
       >
         <AppProvider>{children}</AppProvider>
+        <Toaster />
       </body>
     </html>
   );

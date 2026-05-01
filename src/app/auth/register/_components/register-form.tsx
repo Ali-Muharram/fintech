@@ -13,12 +13,14 @@ import {
 import { Input } from '@/components/ui/input';
 import { registerSchema, type RegisterValues } from '@/lib/schemes/auth';
 import Link from 'next/link';
-import { Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 import { useRegister } from '../_hooks/use-register';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { toast } from 'sonner';
+import { ErrorAlert } from '@/components/shared/error-alert';
 
 export function RegisterForm({
   className,
@@ -26,6 +28,7 @@ export function RegisterForm({
 }: React.ComponentProps<'form'>) {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   const registerMutation = useRegister();
 
@@ -44,6 +47,7 @@ export function RegisterForm({
   });
 
   const onSubmit = async (data: RegisterValues) => {
+    setError(null);
     registerMutation.mutate(data, {
       onSuccess: async () => {
         // Automatically sign in after registration
@@ -54,15 +58,15 @@ export function RegisterForm({
         });
 
         if (loginResult?.ok) {
-          alert('تم إنشاء الحساب وتسجيل الدخول بنجاح!');
+          toast.success('تم إنشاء الحساب وتسجيل الدخول بنجاح!');
           router.push('/');
         } else {
-          alert('تم إنشاء الحساب، يرجى تسجيل الدخول يدوياً.');
+          toast.warning('تم إنشاء الحساب، يرجى تسجيل الدخول يدوياً.');
           router.push('/auth/login');
         }
       },
       onError: (error) => {
-        alert(error.message);
+        setError(error.message);
       },
     });
   };
@@ -141,8 +145,19 @@ export function RegisterForm({
         </Field>
 
         <Field>
+          {error && (
+            <ErrorAlert
+              title="فشل في إنشاء الحساب"
+              message={error}
+              className="mb-2"
+            />
+          )}
           <Button type="submit" className="w-full" disabled={isPending}>
-            {isPending ? 'جاري الإنشاء...' : 'إنشاء الحساب'}
+            {isPending ? (
+              <Loader2 className="size-4 animate-spin" />
+            ) : (
+              'إنشاء الحساب'
+            )}
           </Button>
           <FieldDescription className="text-center">
             لديك حساب بالفعل؟{' '}
