@@ -59,7 +59,8 @@ export function RegisterForm({
 
         if (loginResult?.ok) {
           toast.success('تم إنشاء الحساب وتسجيل الدخول بنجاح!');
-          router.push('/');
+          router.push('/dashboard');
+          router.refresh();
         } else {
           toast.warning('تم إنشاء الحساب، يرجى تسجيل الدخول يدوياً.');
           router.push('/auth/login');

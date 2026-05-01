@@ -8,6 +8,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from '@/components/ui/sidebar';
 
 
@@ -21,6 +22,7 @@ export function NavMain({
   }[];
 }) {
   const pathname = usePathname();
+  const { setOpenMobile } = useSidebar();
 
   return (
     <SidebarGroup>
@@ -34,6 +36,7 @@ export function NavMain({
               <Link
                 key={item.title}
                 href={item.url}
+                onClick={() => setOpenMobile(false)}
                 className={`h-11 w-full cursor-pointer rounded-xl transition-colors ${isActive ? 'bg-accent/80 text-foreground font-semibold shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-accent/50 font-medium'}`}
               >
                 <SidebarMenuItem>

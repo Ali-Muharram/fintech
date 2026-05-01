@@ -10,6 +10,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from '@/components/ui/sidebar';
 
 export function NavSecondary({
@@ -23,6 +24,7 @@ export function NavSecondary({
   }[];
 } & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   const pathname = usePathname();
+  const { setOpenMobile } = useSidebar();
 
   return (
     <SidebarGroup {...props}>
@@ -38,7 +40,11 @@ export function NavSecondary({
                   isActive={isActive}
                   className={`h-11 transition-colors ${isActive ? 'bg-accent/80 text-foreground font-semibold shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-accent/50 font-medium'}`}
                 >
-                  <Link href={item.url} className="flex items-center gap-3">
+                  <Link
+                    href={item.url}
+                    onClick={() => setOpenMobile(false)}
+                    className="flex items-center gap-3"
+                  >
                     <div
                       className={
                         isActive

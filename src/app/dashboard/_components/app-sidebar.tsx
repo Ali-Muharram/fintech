@@ -14,6 +14,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from '@/components/ui/sidebar';
 import { Shield } from 'lucide-react';
 import { SIDEBAR_DATA } from '@/lib/constants/sidebar';
@@ -26,6 +27,7 @@ export function AppSidebar({
 }: React.ComponentProps<typeof Sidebar> & {
   sessionUser?: AuthUser;
 }) {
+  const { setOpenMobile } = useSidebar();
   const user: AuthUser = {
     name: sessionUser?.name || 'مستخدم غير معروف',
     email: sessionUser?.email || '',
@@ -41,7 +43,14 @@ export function AppSidebar({
           <SidebarMenuItem>
             <SidebarMenuButton
               className="data-[slot=sidebar-menu-button]:p-1.5!"
-              render={<Link href="/" />}
+              render={
+                <Link
+                  href="/"
+                  onClick={() => {
+                    setOpenMobile(false);
+                  }}
+                />
+              }
             >
               <div className="bg-foreground text-background flex size-6 items-center justify-center rounded-md">
                 <Shield className="size-4" />

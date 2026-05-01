@@ -6,8 +6,10 @@ import { Shield, Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/constants/navigation';
 import { useGSAP } from '@gsap/react';
 import { animateHeader } from '@/lib/utils/gsap/header';
+import { useSession } from 'next-auth/react';
 
 export default function Header() {
+  const { data: session, status } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
 
@@ -49,28 +51,38 @@ export default function Header() {
           ))}
         </ul>
 
-        {/* Action Buttons (Login/auth/register) - Visible on Large Screens */}
+        {/* Action Buttons - Dynamic based on Session */}
         <div className="hidden items-center gap-4 lg:flex">
-          {/* Animated Border Login Button using Theme Schema */}
-          <Link
-            href="/auth/login"
-            className="group relative flex items-center justify-center overflow-hidden rounded-xl p-0.25 transition-all hover:scale-105 active:scale-95"
-          >
-            {/* Rotating Gradient using Theme Colors */}
-            <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--destructive)_0%,var(--sidebar-primary)_50%,var(--destructive)_100%)]" />
+          {status === 'loading' ? (
+            <div className="h-8 w-24 animate-pulse rounded-xl bg-foreground/10" />
+          ) : session ? (
+            <Link
+              href="/dashboard"
+              className="bg-foreground text-background rounded-xl px-5 py-2 text-xs font-bold shadow-[0_0_1.25rem_rgba(255,255,255,0.1)] transition-all hover:opacity-90 active:scale-95"
+            >
+              لوحة التحكم
+            </Link>
+          ) : (
+            <>
+              {/* Animated Border Login Button */}
+              <Link
+                href="/auth/login"
+                className="group relative flex items-center justify-center overflow-hidden rounded-xl p-0.25 transition-all hover:scale-105 active:scale-95"
+              >
+                <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--destructive)_0%,var(--sidebar-primary)_50%,var(--destructive)_100%)]" />
+                <div className="bg-background text-foreground group-hover:bg-accent/50 relative flex h-full w-full items-center justify-center rounded-xl px-4 py-2 text-xs font-semibold transition-all">
+                  تسجيل الدخول
+                </div>
+              </Link>
 
-            {/* Inner Content using Theme Background */}
-            <div className="bg-background text-foreground group-hover:bg-accent/50 relative flex h-full w-full items-center justify-center rounded-xl px-4 py-2 text-xs font-semibold transition-all">
-              تسجيل الدخول
-            </div>
-          </Link>
-
-          <Link
-            href="/auth/register"
-            className="bg-foreground text-background rounded-xl px-4 py-2 text-xs font-bold shadow-[0_0_1.25rem_rgba(255,255,255,0.1)] transition-all hover:opacity-90 active:scale-95"
-          >
-            إنشاء حساب
-          </Link>
+              <Link
+                href="/auth/register"
+                className="bg-foreground text-background rounded-xl px-4 py-2 text-xs font-bold shadow-[0_0_1.25rem_rgba(255,255,255,0.1)] transition-all hover:opacity-90 active:scale-95"
+              >
+                إنشاء حساب
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Mobile Menu Toggle Button */}
@@ -111,24 +123,35 @@ export default function Header() {
 
           {/* Mobile Action Buttons */}
           <div className="mt-2 flex flex-col gap-2 border-t border-white/10 pt-3">
-            <Link
-              href="/login"
-              className="group relative flex items-center justify-center overflow-hidden rounded-xl p-0.25 transition-all hover:scale-105 active:scale-95"
-            >
-              {/* Rotating Gradient using Theme Colors */}
-              <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--destructive)_0%,var(--sidebar-primary)_50%,var(--destructive)_100%)]" />
-
-              {/* Inner Content using Theme Background */}
-              <div className="bg-background group-hover:bg-accent/50 relative flex h-full w-full items-center justify-center rounded-xl px-4 py-2.5 text-xs font-semibold transition-all">
-                تسجيل الدخول
-              </div>
-            </Link>
-            <Link
-              href="/auth/register"
-              className="text-background bg-foreground flex items-center justify-center rounded-xl py-2.5 text-xs font-bold"
-            >
-              إنشاء حساب
-            </Link>
+            {session ? (
+              <Link
+                href="/dashboard"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-background bg-foreground flex items-center justify-center rounded-xl py-2.5 text-xs font-bold shadow-lg"
+              >
+                لوحة التحكم
+              </Link>
+            ) : (
+              <>
+                <Link
+                  href="/auth/login"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="group relative flex items-center justify-center overflow-hidden rounded-xl p-0.25 transition-all hover:scale-105 active:scale-95"
+                >
+                  <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--destructive)_0%,var(--sidebar-primary)_50%,var(--destructive)_100%)]" />
+                  <div className="bg-background group-hover:bg-accent/50 relative flex h-full w-full items-center justify-center rounded-xl px-4 py-2.5 text-xs font-semibold transition-all">
+                    تسجيل الدخول
+                  </div>
+                </Link>
+                <Link
+                  href="/auth/register"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-background bg-foreground flex items-center justify-center rounded-xl py-2.5 text-xs font-bold"
+                >
+                  إنشاء حساب
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}
