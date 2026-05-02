@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# منصة الحلول المالية الآمنة - Fintech Escrow Platform
 
-## Getting Started
+تقدم هذه المنصة حلاً ثورياً ومبتكراً لمواجهة تحديات العمل الحر في الوطن العربي، وبالأخص مشكلة **"العملاء الوهميين" (Fake Clients)**، من خلال توفير بيئة تقنية آمنة تضمن حقوق جميع الأطراف.
 
-First, run the development server:
+## 🚀 فكرة المشروع
+تعتمد المنصة على نظام **حجز الأموال (Escrow)**، حيث تعمل كوسيط ضامن بين العميل والمستقل. يهدف المشروع إلى خلق الثقة في المعاملات الرقمية وتسهيل عمليات الدفع الدولية والمحلية.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🛡️ كيف تحمي المنصة حقوقك؟
+1. **نظام حجز الأموال (Escrow):** يقوم العميل بدفع قيمة المشروع مقدماً للمنصة، مما يضمن للمستقل وجود الميزانية.
+2. **تقسيم المشروع لمراحل (Milestones):** إمكانية دفع وتحرير الأموال بناءً على إنجاز مراحل محددة، مما يقلل المخاطر.
+3. **التحكم في سحب الأموال:** لا يمكن للمستقل سحب الأموال إلا بعد إتمام العمل وحصوله على موافقة العميل الصريحة.
+4. **فترة المراجعة (24 ساعة):** بعد موافقة العميل، تدخل الأموال في فترة انتظار لمدة 24 ساعة قبل أن تصبح قابلة للسحب، مما يتيح للعميل مراجعة الملفات النهائية بدقة.
+5. **نظام البلاغات والنزاعات:** يمكن لأي طرف تقديم بلاغ خلال فترة المراجعة في حال وجود أي تلاعب، لتقوم إدارة المنصة بالتدخل وحل النزاع بشكل عادل.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 💳 حلول الدفع المبتكرة
+تحل المنصة مشكلة وسائل الدفع غير المتاحة في بعض الدول العربية (مثل ويسترن يونيون) مقابل عمولة رمزية تبلغ **1%** فقط، مما يسهل تدفق الأموال للمستقلين دون عوائق تقنية أو جغرافية.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ التقنيات المستخدمة (Tech Stack)
+تم بناء المنصة باستخدام أحدث التقنيات لضمان السرعة، الأمان، وتجربة مستخدم متميزة:
 
-## Learn More
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [Shadcn UI](https://ui.shadcn.com/)
+- **Animations:** [GSAP](https://greensock.com/gsap/) & [Framer Motion](https://www.framer.com/motion/)
+- **State Management & Data Fetching:** [TanStack React Query](https://tanstack.com/query/latest)
+- **Authentication:** [NextAuth.js](https://next-auth.js.org/)
+- **Database:** [MongoDB](https://www.mongodb.com/) مع [Mongoose](https://mongoosejs.com/)
+- **Forms:** [React Hook Form](https://react-hook-form.com/) مع [Zod](https://zod.dev/) للتحقق من البيانات.
+- **Charts:** [Recharts](https://recharts.org/) لتمثيل البيانات المالية.
+- **Icons:** [Lucide React](https://lucide.dev/)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔑 بيانات الدخول التجريبية (Demo Accounts)
+يمكنك تجربة المنصة من خلال الحسابات التالية (كلاهما يستخدم نفس كلمة السر):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **حساب العميل (Client):** `client@gmail.com`
+- **حساب المستقل (Freelancer):** `Freelancer@gmail.com`
+- **كلمة السر:** `123456789`
 
-## Deploy on Vercel
+### 👨‍💼 لوحة تحكم الإدارة (Admin Panel)
+يمكن للمسؤولين الوصول إلى لوحة التحكم الشاملة لإدارة العمليات والنزاعات عبر الرابط التالي:
+🔗 **[لوحة التحكم](https://fintech-zeta-roan.vercel.app/admin)**
+*(ملاحظة: يتطلب الدخول تسجيل الدخول بحساب له صلاحيات أدمن).*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💻 التشغيل المحلي (Installation)
+
+1. قم بتحميل المشروع:
+   ```bash
+   git clone <repository-url>
+   ```
+2. تثبيت الحزم:
+   ```bash
+   npm install # أو pnpm install
+   ```
+3. إعداد ملف البيئة `.env`:
+   قم بإنشاء ملف `.env.local` وأضف المتغيرات اللازمة (قاعدة البيانات، NextAuth secret، إلخ).
+4. تشغيل المشروع:
+   ```bash
+   npm run dev
+   ```
+
+---
+**تم تطوير هذا المشروع لضمان بيئة عمل حر عادلة وآمنة للجميع.**

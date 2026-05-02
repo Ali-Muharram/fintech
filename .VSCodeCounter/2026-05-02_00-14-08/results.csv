@@ -1,0 +1,137 @@
+"filename", "language", "TypeScript", "TypeScript JSX", "PostCSS", "comment", "blank", "total"
+"d:\Clients\salam hack\fintich\src\app\admin\_components\admin-sidebar.tsx", "TypeScript JSX", 0, 68, 0, 0, 4, 72
+"d:\Clients\salam hack\fintich\src\app\admin\_hooks\use-admin.ts", "TypeScript", 31, 0, 0, 0, 4, 35
+"d:\Clients\salam hack\fintich\src\app\admin\disputes\[id]\page.tsx", "TypeScript JSX", 0, 150, 0, 0, 15, 165
+"d:\Clients\salam hack\fintich\src\app\admin\disputes\page.tsx", "TypeScript JSX", 0, 75, 0, 3, 9, 87
+"d:\Clients\salam hack\fintich\src\app\admin\layout.tsx", "TypeScript JSX", 0, 38, 0, 1, 4, 43
+"d:\Clients\salam hack\fintich\src\app\admin\page.tsx", "TypeScript JSX", 0, 90, 0, 3, 11, 104
+"d:\Clients\salam hack\fintich\src\app\admin\projects\[id]\page.tsx", "TypeScript JSX", 0, 200, 0, 2, 10, 212
+"d:\Clients\salam hack\fintich\src\app\admin\projects\page.tsx", "TypeScript JSX", 0, 37, 0, 0, 9, 46
+"d:\Clients\salam hack\fintich\src\app\admin\users\page.tsx", "TypeScript JSX", 0, 49, 0, 0, 8, 57
+"d:\Clients\salam hack\fintich\src\app\admin\withdrawals\page.tsx", "TypeScript JSX", 0, 92, 0, 0, 8, 100
+"d:\Clients\salam hack\fintich\src\app\api\admin\disputes\route.ts", "TypeScript", 18, 0, 0, 0, 3, 21
+"d:\Clients\salam hack\fintich\src\app\api\admin\projects\route.ts", "TypeScript", 16, 0, 0, 0, 3, 19
+"d:\Clients\salam hack\fintich\src\app\api\admin\stats\route.ts", "TypeScript", 29, 0, 0, 1, 6, 36
+"d:\Clients\salam hack\fintich\src\app\api\admin\users\route.ts", "TypeScript", 16, 0, 0, 0, 3, 19
+"d:\Clients\salam hack\fintich\src\app\api\admin\withdrawals\route.ts", "TypeScript", 62, 0, 0, 1, 13, 76
+"d:\Clients\salam hack\fintich\src\app\api\auth\[...nextauth]\route.ts", "TypeScript", 68, 0, 0, 0, 10, 78
+"d:\Clients\salam hack\fintich\src\app\api\auth\register\route.ts", "TypeScript", 45, 0, 0, 5, 5, 55
+"d:\Clients\salam hack\fintich\src\app\api\disputes\[id]\route.ts", "TypeScript", 62, 0, 0, 2, 13, 77
+"d:\Clients\salam hack\fintich\src\app\api\disputes\route.ts", "TypeScript", 67, 0, 0, 1, 11, 79
+"d:\Clients\salam hack\fintich\src\app\api\home-page-client\route.ts", "TypeScript", 80, 0, 0, 6, 19, 105
+"d:\Clients\salam hack\fintich\src\app\api\my-projects\[id]\route.ts", "TypeScript", 98, 0, 0, 1, 15, 114
+"d:\Clients\salam hack\fintich\src\app\api\my-projects\route.ts", "TypeScript", 99, 0, 0, 4, 16, 119
+"d:\Clients\salam hack\fintich\src\app\api\project\[id]\route.ts", "TypeScript", 80, 0, 0, 2, 14, 96
+"d:\Clients\salam hack\fintich\src\app\api\project\route.ts", "TypeScript", 35, 0, 0, 1, 7, 43
+"d:\Clients\salam hack\fintich\src\app\api\withdrawals\route.ts", "TypeScript", 58, 0, 0, 2, 12, 72
+"d:\Clients\salam hack\fintich\src\app\auth\login\_components\login-form.tsx", "TypeScript JSX", 0, 135, 0, 0, 10, 145
+"d:\Clients\salam hack\fintich\src\app\auth\login\page.tsx", "TypeScript JSX", 0, 36, 0, 0, 2, 38
+"d:\Clients\salam hack\fintich\src\app\auth\register\_components\register-form.tsx", "TypeScript JSX", 0, 193, 0, 1, 16, 210
+"d:\Clients\salam hack\fintich\src\app\auth\register\_hooks\use-register.ts", "TypeScript", 31, 0, 0, 0, 6, 37
+"d:\Clients\salam hack\fintich\src\app\auth\register\page.tsx", "TypeScript JSX", 0, 36, 0, 0, 1, 37
+"d:\Clients\salam hack\fintich\src\app\dashboard\_components\app-sidebar.tsx", "TypeScript JSX", 0, 69, 0, 0, 5, 74
+"d:\Clients\salam hack\fintich\src\app\dashboard\_components\clients-table.tsx", "TypeScript JSX", 0, 117, 0, 0, 6, 123
+"d:\Clients\salam hack\fintich\src\app\dashboard\_components\data-table.tsx", "TypeScript JSX", 0, 156, 0, 1, 8, 165
+"d:\Clients\salam hack\fintich\src\app\dashboard\_components\nav-main.tsx", "TypeScript JSX", 0, 63, 0, 0, 5, 68
+"d:\Clients\salam hack\fintich\src\app\dashboard\_components\nav-secondary.tsx", "TypeScript JSX", 0, 63, 0, 0, 5, 68
+"d:\Clients\salam hack\fintich\src\app\dashboard\_components\nav-user.tsx", "TypeScript JSX", 0, 95, 0, 0, 5, 100
+"d:\Clients\salam hack\fintich\src\app\dashboard\_components\site-header.tsx", "TypeScript JSX", 0, 21, 0, 0, 4, 25
+"d:\Clients\salam hack\fintich\src\app\dashboard\_components\stats-cards.tsx", "TypeScript JSX", 0, 129, 0, 5, 9, 143
+"d:\Clients\salam hack\fintich\src\app\dashboard\_components\withdrawal-section.tsx", "TypeScript JSX", 0, 58, 0, 0, 8, 66
+"d:\Clients\salam hack\fintich\src\app\dashboard\disputes\[id]\page.tsx", "TypeScript JSX", 0, 175, 0, 3, 15, 193
+"d:\Clients\salam hack\fintich\src\app\dashboard\disputes\page.tsx", "TypeScript JSX", 0, 64, 0, 0, 8, 72
+"d:\Clients\salam hack\fintich\src\app\dashboard\layout.tsx", "TypeScript JSX", 0, 34, 0, 0, 3, 37
+"d:\Clients\salam hack\fintich\src\app\dashboard\my-projects\[id]\edit\page.tsx", "TypeScript JSX", 0, 294, 0, 3, 17, 314
+"d:\Clients\salam hack\fintich\src\app\dashboard\my-projects\[id]\page.tsx", "TypeScript JSX", 0, 407, 0, 7, 23, 437
+"d:\Clients\salam hack\fintich\src\app\dashboard\my-projects\_components\CancelProjectDialog.tsx", "TypeScript JSX", 0, 50, 0, 0, 4, 54
+"d:\Clients\salam hack\fintich\src\app\dashboard\my-projects\_components\OpenDisputeDialog.tsx", "TypeScript JSX", 0, 101, 0, 0, 8, 109
+"d:\Clients\salam hack\fintich\src\app\dashboard\my-projects\_components\ProjectsTable.tsx", "TypeScript JSX", 0, 197, 0, 0, 12, 209
+"d:\Clients\salam hack\fintich\src\app\dashboard\my-projects\_hooks\use-projects.ts", "TypeScript", 86, 0, 0, 0, 8, 94
+"d:\Clients\salam hack\fintich\src\app\dashboard\my-projects\new\checkout\page.tsx", "TypeScript JSX", 0, 229, 0, 15, 33, 277
+"d:\Clients\salam hack\fintich\src\app\dashboard\my-projects\new\page.tsx", "TypeScript JSX", 0, 280, 0, 8, 16, 304
+"d:\Clients\salam hack\fintich\src\app\dashboard\my-projects\page.tsx", "TypeScript JSX", 0, 78, 0, 1, 8, 87
+"d:\Clients\salam hack\fintich\src\app\dashboard\page.tsx", "TypeScript JSX", 0, 101, 0, 5, 13, 119
+"d:\Clients\salam hack\fintich\src\app\dashboard\projects\[id]\edit\page.tsx", "TypeScript JSX", 0, 291, 0, 3, 18, 312
+"d:\Clients\salam hack\fintich\src\app\dashboard\projects\[id]\page.tsx", "TypeScript JSX", 0, 304, 0, 6, 19, 329
+"d:\Clients\salam hack\fintich\src\app\dashboard\projects\new\page.tsx", "TypeScript JSX", 0, 276, 0, 7, 17, 300
+"d:\Clients\salam hack\fintich\src\app\dashboard\projects\page.tsx", "TypeScript JSX", 0, 149, 0, 1, 7, 157
+"d:\Clients\salam hack\fintich\src\app\dashboard\settings\page.tsx", "TypeScript JSX", 0, 7, 0, 0, 1, 8
+"d:\Clients\salam hack\fintich\src\app\dashboard\withdrawals\page.tsx", "TypeScript JSX", 0, 7, 0, 0, 1, 8
+"d:\Clients\salam hack\fintich\src\app\error.tsx", "TypeScript JSX", 0, 73, 0, 7, 15, 95
+"d:\Clients\salam hack\fintich\src\app\globals.css", "PostCSS", 0, 0, 207, 0, 14, 221
+"d:\Clients\salam hack\fintich\src\app\layout.tsx", "TypeScript JSX", 0, 30, 0, 0, 4, 34
+"d:\Clients\salam hack\fintich\src\app\loading.tsx", "TypeScript JSX", 0, 25, 0, 6, 5, 36
+"d:\Clients\salam hack\fintich\src\app\not-found.tsx", "TypeScript JSX", 0, 47, 0, 7, 8, 62
+"d:\Clients\salam hack\fintich\src\app\page.tsx", "TypeScript JSX", 0, 24, 0, 0, 2, 26
+"d:\Clients\salam hack\fintich\src\components\features\footer\index.tsx", "TypeScript JSX", 0, 139, 0, 3, 8, 150
+"d:\Clients\salam hack\fintich\src\components\features\header\index.tsx", "TypeScript JSX", 0, 141, 0, 9, 11, 161
+"d:\Clients\salam hack\fintich\src\components\features\landing-page\faq\index.tsx", "TypeScript JSX", 0, 87, 0, 3, 9, 99
+"d:\Clients\salam hack\fintich\src\components\features\landing-page\hero-section\index.tsx", "TypeScript JSX", 0, 69, 0, 9, 12, 90
+"d:\Clients\salam hack\fintich\src\components\features\landing-page\pricing\index.tsx", "TypeScript JSX", 0, 101, 0, 3, 14, 118
+"d:\Clients\salam hack\fintich\src\components\features\landing-page\reviews\index.tsx", "TypeScript JSX", 0, 78, 0, 5, 7, 90
+"d:\Clients\salam hack\fintich\src\components\features\landing-page\services\index.tsx", "TypeScript JSX", 0, 89, 0, 5, 9, 103
+"d:\Clients\salam hack\fintich\src\components\features\landing-page\why-us\index.tsx", "TypeScript JSX", 0, 144, 0, 10, 11, 165
+"d:\Clients\salam hack\fintich\src\components\login-form.tsx", "TypeScript JSX", 0, 64, 0, 0, 2, 66
+"d:\Clients\salam hack\fintich\src\components\providers\app-provider\index.tsx", "TypeScript JSX", 0, 13, 0, 0, 3, 16
+"d:\Clients\salam hack\fintich\src\components\providers\app-provider\react-query-provider.tsx", "TypeScript JSX", 0, 20, 0, 0, 3, 23
+"d:\Clients\salam hack\fintich\src\components\providers\app-provider\theme-provider.tsx", "TypeScript JSX", 0, 18, 0, 0, 3, 21
+"d:\Clients\salam hack\fintich\src\components\providers\session-provider.tsx", "TypeScript JSX", 0, 5, 0, 0, 3, 8
+"d:\Clients\salam hack\fintich\src\components\shared\error-alert.tsx", "TypeScript JSX", 0, 32, 0, 0, 4, 36
+"d:\Clients\salam hack\fintich\src\components\ui\alert-dialog.tsx", "TypeScript JSX", 0, 172, 0, 0, 16, 188
+"d:\Clients\salam hack\fintich\src\components\ui\avatar.tsx", "TypeScript JSX", 0, 100, 0, 0, 10, 110
+"d:\Clients\salam hack\fintich\src\components\ui\badge.tsx", "TypeScript JSX", 0, 48, 0, 0, 5, 53
+"d:\Clients\salam hack\fintich\src\components\ui\breadcrumb.tsx", "TypeScript JSX", 0, 116, 0, 0, 10, 126
+"d:\Clients\salam hack\fintich\src\components\ui\button.tsx", "TypeScript JSX", 0, 54, 0, 0, 5, 59
+"d:\Clients\salam hack\fintich\src\components\ui\card.tsx", "TypeScript JSX", 0, 94, 0, 0, 10, 104
+"d:\Clients\salam hack\fintich\src\components\ui\chart.tsx", "TypeScript JSX", 0, 339, 0, 1, 34, 374
+"d:\Clients\salam hack\fintich\src\components\ui\checkbox.tsx", "TypeScript JSX", 0, 25, 0, 0, 5, 30
+"d:\Clients\salam hack\fintich\src\components\ui\dialog.tsx", "TypeScript JSX", 0, 147, 0, 0, 14, 161
+"d:\Clients\salam hack\fintich\src\components\ui\drawer.tsx", "TypeScript JSX", 0, 121, 0, 0, 14, 135
+"d:\Clients\salam hack\fintich\src\components\ui\dropdown-menu.tsx", "TypeScript JSX", 0, 250, 0, 0, 19, 269
+"d:\Clients\salam hack\fintich\src\components\ui\field.tsx", "TypeScript JSX", 0, 218, 0, 0, 21, 239
+"d:\Clients\salam hack\fintich\src\components\ui\input.tsx", "TypeScript JSX", 0, 17, 0, 0, 4, 21
+"d:\Clients\salam hack\fintich\src\components\ui\label.tsx", "TypeScript JSX", 0, 16, 0, 0, 5, 21
+"d:\Clients\salam hack\fintich\src\components\ui\select.tsx", "TypeScript JSX", 0, 188, 0, 0, 14, 202
+"d:\Clients\salam hack\fintich\src\components\ui\separator.tsx", "TypeScript JSX", 0, 21, 0, 0, 5, 26
+"d:\Clients\salam hack\fintich\src\components\ui\sheet.tsx", "TypeScript JSX", 0, 125, 0, 0, 14, 139
+"d:\Clients\salam hack\fintich\src\components\ui\sidebar.tsx", "TypeScript JSX", 0, 664, 0, 10, 50, 724
+"d:\Clients\salam hack\fintich\src\components\ui\skeleton.tsx", "TypeScript JSX", 0, 11, 0, 0, 3, 14
+"d:\Clients\salam hack\fintich\src\components\ui\social-icons.tsx", "TypeScript JSX", 0, 56, 0, 0, 6, 62
+"d:\Clients\salam hack\fintich\src\components\ui\sonner.tsx", "TypeScript JSX", 0, 45, 0, 0, 5, 50
+"d:\Clients\salam hack\fintich\src\components\ui\table.tsx", "TypeScript JSX", 0, 105, 0, 0, 12, 117
+"d:\Clients\salam hack\fintich\src\components\ui\tabs.tsx", "TypeScript JSX", 0, 74, 0, 0, 9, 83
+"d:\Clients\salam hack\fintich\src\components\ui\textarea.tsx", "TypeScript JSX", 0, 20, 0, 0, 5, 25
+"d:\Clients\salam hack\fintich\src\components\ui\toggle-group.tsx", "TypeScript JSX", 0, 82, 0, 0, 8, 90
+"d:\Clients\salam hack\fintich\src\components\ui\toggle.tsx", "TypeScript JSX", 0, 40, 0, 0, 6, 46
+"d:\Clients\salam hack\fintich\src\components\ui\tooltip.tsx", "TypeScript JSX", 0, 59, 0, 0, 8, 67
+"d:\Clients\salam hack\fintich\src\hooks\use-mobile.ts", "TypeScript", 15, 0, 0, 0, 5, 20
+"d:\Clients\salam hack\fintich\src\lib\constants\admin-sidebar.tsx", "TypeScript JSX", 0, 34, 0, 0, 2, 36
+"d:\Clients\salam hack\fintich\src\lib\constants\faq.ts", "TypeScript", 22, 0, 0, 0, 1, 23
+"d:\Clients\salam hack\fintich\src\lib\constants\navigation.ts", "TypeScript", 14, 0, 0, 3, 3, 20
+"d:\Clients\salam hack\fintich\src\lib\constants\pricing.ts", "TypeScript", 44, 0, 0, 0, 4, 48
+"d:\Clients\salam hack\fintich\src\lib\constants\reviews.ts", "TypeScript", 26, 0, 0, 0, 1, 27
+"d:\Clients\salam hack\fintich\src\lib\constants\sidebar.tsx", "TypeScript JSX", 0, 34, 0, 0, 3, 37
+"d:\Clients\salam hack\fintich\src\lib\models\Dispute.ts", "TypeScript", 45, 0, 0, 0, 7, 52
+"d:\Clients\salam hack\fintich\src\lib\models\Project.ts", "TypeScript", 60, 0, 0, 0, 8, 68
+"d:\Clients\salam hack\fintich\src\lib\models\User.ts", "TypeScript", 37, 0, 0, 0, 5, 42
+"d:\Clients\salam hack\fintich\src\lib\models\Withdrawal.ts", "TypeScript", 23, 0, 0, 0, 4, 27
+"d:\Clients\salam hack\fintich\src\lib\schemes\auth.ts", "TypeScript", 23, 0, 0, 0, 5, 28
+"d:\Clients\salam hack\fintich\src\lib\schemes\project.ts", "TypeScript", 27, 0, 0, 0, 4, 31
+"d:\Clients\salam hack\fintich\src\lib\services\authService.ts", "TypeScript", 36, 0, 0, 4, 8, 48
+"d:\Clients\salam hack\fintich\src\lib\services\projectService.ts", "TypeScript", 108, 0, 0, 0, 11, 119
+"d:\Clients\salam hack\fintich\src\lib\types\auth.ts", "TypeScript", 8, 0, 0, 0, 1, 9
+"d:\Clients\salam hack\fintich\src\lib\types\next-auth.d.ts", "TypeScript", 10, 0, 0, 1, 4, 15
+"d:\Clients\salam hack\fintich\src\lib\types\project.ts", "TypeScript", 29, 0, 0, 0, 4, 33
+"d:\Clients\salam hack\fintich\src\lib\utils\gsap\faq.ts", "TypeScript", 26, 0, 0, 3, 5, 34
+"d:\Clients\salam hack\fintich\src\lib\utils\gsap\header.ts", "TypeScript", 11, 0, 0, 0, 3, 14
+"d:\Clients\salam hack\fintich\src\lib\utils\gsap\hero.ts", "TypeScript", 42, 0, 0, 12, 10, 64
+"d:\Clients\salam hack\fintich\src\lib\utils\gsap\index.ts", "TypeScript", 5, 0, 0, 0, 1, 6
+"d:\Clients\salam hack\fintich\src\lib\utils\gsap\pricing.ts", "TypeScript", 25, 0, 0, 4, 5, 34
+"d:\Clients\salam hack\fintich\src\lib\utils\gsap\reviews.ts", "TypeScript", 37, 0, 0, 3, 9, 49
+"d:\Clients\salam hack\fintich\src\lib\utils\gsap\services.ts", "TypeScript", 27, 0, 0, 2, 7, 36
+"d:\Clients\salam hack\fintich\src\lib\utils\gsap\why-us.ts", "TypeScript", 43, 0, 0, 4, 7, 54
+"d:\Clients\salam hack\fintich\src\lib\utils\mongoose.ts", "TypeScript", 40, 0, 0, 0, 12, 52
+"d:\Clients\salam hack\fintich\src\lib\utils\tailwind-merge.ts", "TypeScript", 5, 0, 0, 0, 2, 7
+"d:\Clients\salam hack\fintich\src\middleware.ts", "TypeScript", 21, 0, 0, 2, 7, 30
+"d:\Clients\salam hack\fintich\src\types\next-auth.d.ts", "TypeScript", 23, 0, 0, 0, 4, 27
+"Total", "-", 1813, 9488, 207, 217, 1169, 12894
